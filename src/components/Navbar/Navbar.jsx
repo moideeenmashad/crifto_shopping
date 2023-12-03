@@ -8,9 +8,18 @@ const Navbar = () => {
     { itemName: "Find Store", linkTo: "#" },
   ];
   let headItemsNav2 = [
-    { itemName: "Sign in", linkTo: "#", iconName: "bi bi-person" },
-    { itemName: "Favourites", linkTo: "#", iconName: "bi bi-heart" },
-    { itemName: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart" },
+    { itemName: "Sign in", linkTo: "#", iconName: "bi bi-person me-1" },
+    { itemName: "Favourites", linkTo: "#", iconName: "bi bi-heart me-1" },
+    { itemName: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart me-1" },
+  ];
+  let headItemsNavSmMd = headItemsNav.concat(headItemsNav2);
+  let navbarItemList = [
+    { navItem: "New & Featured", linkTo: "#" },
+    { navItem: "Men", linkTo: "#" },
+    { navItem: "Women", linkTo: "#" },
+    { navItem: "Kids", linkTo: "#" },
+    { navItem: "Sport", linkTo: "#" },
+    { navItem: "Sustainability", linkTo: "#" },
   ];
   return (
     <div>
@@ -62,27 +71,16 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="main_nav">
             <ul className="navbar-nav mx-auto">
-              {" "}
-              {/* Updated class to mx-auto */}
-              <li className="nav-item active">
-                {" "}
-                <a className="nav-link" href="#">
-                  Home{" "}
-                </a>{" "}
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  {" "}
-                  About{" "}
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  {" "}
-                  Services{" "}
-                </a>
-              </li>
-              <li className="nav-item dropdown has-megamenu">
+              {navbarItemList.map((value, index) => {
+                return (
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      {value.navItem}
+                    </a>
+                  </li>
+                );
+              })}
+              {/* <li className="nav-item dropdown has-megamenu">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -197,23 +195,16 @@ const Navbar = () => {
                     </div>
                   </div>
                 </div>
-              </li>
-              {/* Additional menu items for sm and md screens */}
-              <li className="nav-item d-sm-block d-md-block d-lg-none">
-                <a className="nav-link" href="#">
-                  Customer Service
-                </a>
-              </li>
-              <li className="nav-item d-sm-block d-md-block d-lg-none">
-                <a className="nav-link" href="#">
-                  News Letter
-                </a>
-              </li>
-              <li className="nav-item d-sm-block d-md-block d-lg-none">
-                <a className="nav-link" href="#">
-                  Find a Store
-                </a>
-              </li>
+              </li> */}
+              {headItemsNavSmMd.map((value, index) => {
+                return (
+                  <li className="nav-item d-sm-block d-md-block d-lg-none">
+                    <a className="nav-link" href={value.linkTo}>
+                      {value.itemName}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
