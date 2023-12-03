@@ -1,53 +1,69 @@
-import React, { useState } from "react";
 import "./Navbar.css";
+import Logo from "./h&m-logo.png";
 
 const Navbar = () => {
-  const [shoppingCart, SetshopingCart] = useState(0);
+  let headItemsNav = [
+    { itemName: "Customer Service", linkTo: "#" },
+    { itemName: "News Letter", linkTo: "#" },
+    { itemName: "Find Store", linkTo: "#" },
+  ];
+  let headItemsNav2 = [
+    { itemName: "Sign in", linkTo: "#", iconName: "bi bi-person" },
+    { itemName: "Favourites", linkTo: "#", iconName: "bi bi-heart" },
+    { itemName: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart" },
+  ];
   return (
     <div>
-      <div className="container-fluid bg-dark p-2" id="head-items-1">
-        <div className="d-flex justify-content-around">
+      <div
+        className="container-fluid p-2 d-sm-none d-lg-block"
+        id="head-items-1"
+      >
+        <div className="d-flex justify-content-between align-items-center mt-2 ms-auto">
           <div className="item-start">
-            <a href="#" className="head-nav-item">
-              Customer Service
-            </a>
-            <a href="#" className="head-nav-item">
-              News Letter
-            </a>
-            <a href="#" className="head-nav-item">
-              Find a Store
-            </a>
+            {headItemsNav.map((value, index) => {
+              return (
+                <a href={value.linkTo} className="nav-item head-nav-item">
+                  {value.itemName}
+                </a>
+              );
+            })}
+          </div>
+          <div className="item-center">
+            <img src={Logo} alt="logo.png" className="brand-logo" />
           </div>
           <div className="item-end">
-            <a href="#" className="head-nav-item">
-              <i className="bi bi-person"></i>Sign in
-            </a>
-            <a href="#" className="head-nav-item">
-              <i className="bi bi-heart"></i>Favourites
-            </a>
-            <a href="#" className="head-nav-item">
-              <i className="bi bi-cart"></i>Shopping Cart({shoppingCart})
-            </a>
+            {headItemsNav2.map((value, index) => {
+              return (
+                <a href={value.linkTo} className="nav-item head-nav-item">
+                  <i className={value.iconName}></i>
+                  {value.itemName}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg sticky-top" id="head-items-2">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            CRIFTO
-          </a>
+          <img
+            src={Logo}
+            alt=""
+            className="d-md-block d-lg-none nav-sm-md-logo"
+          />
           <button
-            className="navbar-toggler"
+            className="navbar-toggler btn-outline-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#main_nav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <i className="bi bi-three-dots-vertical"></i>
           </button>
           <div className="collapse navbar-collapse" id="main_nav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav mx-auto">
+              {" "}
+              {/* Updated class to mx-auto */}
               <li className="nav-item active">
                 {" "}
                 <a className="nav-link" href="#">
@@ -182,37 +198,21 @@ const Navbar = () => {
                   </div>
                 </div>
               </li>
-            </ul>
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
+              {/* Additional menu items for sm and md screens */}
+              <li className="nav-item d-sm-block d-md-block d-lg-none">
                 <a className="nav-link" href="#">
-                  {" "}
-                  Menu item{" "}
+                  Customer Service
                 </a>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link  dropdown-toggle"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                >
-                  {" "}
-                  Dropdown right{" "}
+              <li className="nav-item d-sm-block d-md-block d-lg-none">
+                <a className="nav-link" href="#">
+                  News Letter
                 </a>
-                <ul className="dropdown-menu dropdown-menu-end">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {" "}
-                      Submenu item 1
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      {" "}
-                      Submenu item 2{" "}
-                    </a>
-                  </li>
-                </ul>
+              </li>
+              <li className="nav-item d-sm-block d-md-block d-lg-none">
+                <a className="nav-link" href="#">
+                  Find a Store
+                </a>
               </li>
             </ul>
           </div>

@@ -26,8 +26,38 @@
   }
 }
 /* ============ mobile view .end// ============ */
-.head-nav-item{
-    color: aliceblue;
-    text-decoration: none;
-    padding: 20px;
+#head-items-1 {
+  height: 5.25rem !important;
+  /* border: 2px solid red; */
+}
+.head-nav-item {
+  color: aliceblue;
+  text-decoration: none;
+  padding-right: 1.25rem;
+}
+
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+@media only screen and (max-width: 600px) {
+  #head-items-1 {
+    display: none !important;
+  }
+}
+.brand-logo {
+  height: 45px;
+  width: auto;
+}
+.nav-item {
+  color: #222222;
+  padding-right: 20px;
+}
+.nav-sm-md-logo {
+  height: 30px;
+  width: auto;
+}
+.nav-link{
+  color: #222222;
+  font-size: 20px;
 }
