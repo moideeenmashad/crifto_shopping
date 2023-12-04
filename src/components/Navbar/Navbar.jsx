@@ -3,14 +3,14 @@ import Logo from "./h&m-logo.png";
 
 const Navbar = () => {
   let headItemsNav = [
-    { itemName: "Customer Service", linkTo: "#" },
-    { itemName: "News Letter", linkTo: "#" },
-    { itemName: "Find Store", linkTo: "#" },
+    { navItem: "Customer Service", linkTo: "#" },
+    { navItem: "News Letter", linkTo: "#" },
+    { navItem: "Find Store", linkTo: "#" },
   ];
   let headItemsNav2 = [
-    { itemName: "Sign in", linkTo: "#", iconName: "bi bi-person me-1" },
-    { itemName: "Favourites", linkTo: "#", iconName: "bi bi-heart me-1" },
-    { itemName: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart me-1" },
+    { navItem: "Sign in", linkTo: "#", iconName: "bi bi-person me-1" },
+    { navItem: "Favourites", linkTo: "#", iconName: "bi bi-heart me-1" },
+    { navItem: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart me-1" },
   ];
   let headItemsNavSmMd = headItemsNav.concat(headItemsNav2);
   let navbarItemList = [
@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div>
       <div
-        className="container-fluid p-2 d-sm-none d-lg-block"
+        className="container-fluid p-4 d-sm-none d-lg-block"
         id="head-items-1"
       >
         <div className="d-flex justify-content-between align-items-center mt-2 ms-auto">
@@ -32,7 +32,7 @@ const Navbar = () => {
             {headItemsNav.map((value, index) => {
               return (
                 <a href={value.linkTo} className="nav-item head-nav-item">
-                  {value.itemName}
+                  {value.navItem}
                 </a>
               );
             })}
@@ -45,7 +45,7 @@ const Navbar = () => {
               return (
                 <a href={value.linkTo} className="nav-item head-nav-item">
                   <i className={value.iconName}></i>
-                  {value.itemName}
+                  {value.navItem}
                 </a>
               );
             })}
@@ -70,7 +70,7 @@ const Navbar = () => {
             <i className="bi bi-three-dots-vertical"></i>
           </button>
           <div className="collapse navbar-collapse" id="main_nav">
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav mx-auto text-center text-sm-center text-md-center">
               {navbarItemList.map((value, index) => {
                 return (
                   <li className="nav-item">
@@ -200,7 +200,7 @@ const Navbar = () => {
                 return (
                   <li className="nav-item d-sm-block d-md-block d-lg-none">
                     <a className="nav-link" href={value.linkTo}>
-                      {value.itemName}
+                      {value.navItem}
                     </a>
                   </li>
                 );
