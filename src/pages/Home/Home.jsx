@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import Event from './Event'
+import EventSection from "./Event";
+import PopularCategory from "./PopularCategory";
 
 const Home = () => {
   return (
@@ -9,7 +10,10 @@ const Home = () => {
         <Navbar />
       </div>
       <div className="mb-3">
-        <Event/>
+        <EventSection />
+      </div>
+      <div className="mb-3">
+        <PopularCategory/>
       </div>
     </div>
   );
