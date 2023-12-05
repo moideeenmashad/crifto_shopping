@@ -6,14 +6,14 @@ import PopularCategory from "./PopularCategory";
 const Home = () => {
   return (
     <div>
-      <div className="mb-3">
+      <div className="sticky-top mb-3">
         <Navbar />
       </div>
       <div className="mb-3">
         <EventSection />
       </div>
       <div className="mb-3">
-        <PopularCategory/>
+        <PopularCategory />
       </div>
     </div>
   );

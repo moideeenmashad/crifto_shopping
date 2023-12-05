@@ -22,7 +22,7 @@ const Navbar = () => {
     { navItem: "Sustainability", linkTo: "#" },
   ];
   return (
-    <div>
+    <div className="sticky-top" id="navbar-sticky-top">
       <div
         className="container-fluid p-4 d-sm-none d-lg-block"
         id="head-items-1"
