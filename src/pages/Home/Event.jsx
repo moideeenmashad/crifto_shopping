@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import holidayBgImg from "./img/6038-Holiday-3x2-8-SLUSSEN-GEN.jpg";
 import newClothBgImg from "./img/3188-3x2-1-new-classics.jpg";
 import "./Home.css";
 
 const EventSection = () => {
+  const [shippingPrice,SetShippingPrice] = useState(1999)
   let ButtonLinkTo = [
     { btnItem: "Men", LinkTo: "#" },
     { btnItem: "Women", LinkTo: "#" },
@@ -17,7 +18,7 @@ const EventSection = () => {
           Estimated delivery time: 2-7 days
         </p>
         <p className="d-none d-sm-none d-md-none d-lg-block">
-          Members get free shipping above Rs.1999
+          Members get free shipping above Rs.{shippingPrice}
         </p>
         <p className="d-none d-sm-none d-md-none d-lg-block">
           Free & flexible 15 days return
