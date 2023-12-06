@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import holidayBgImg from "./img/6038-Holiday-3x2-8-SLUSSEN-GEN.jpg";
 import newClothBgImg from "./img/3188-3x2-1-new-classics.jpg";
 import "./Home.css";
+import AOS from "aos";
 
 const EventSection = () => {
-  const [shippingPrice,SetShippingPrice] = useState(1999)
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  const [shippingPrice, SetShippingPrice] = useState(1999);
   let ButtonLinkTo = [
     { btnItem: "Men", LinkTo: "#" },
     { btnItem: "Women", LinkTo: "#" },
@@ -38,6 +42,7 @@ const EventSection = () => {
       </div>
       <div className="img-container">
         <img src={newClothBgImg} alt="img" className="img-fluid" />
+        <div className="season-title"></div>
       </div>
     </div>
   );
