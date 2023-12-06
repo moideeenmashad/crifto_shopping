@@ -42,7 +42,18 @@ const EventSection = () => {
       </div>
       <div className="img-container">
         <img src={newClothBgImg} alt="img" className="img-fluid" />
-        <div className="season-title"></div>
+        <div className="season-title d-none d-md-none d-lg-block">
+          <h5 className="season-text text-uppercase text-light">
+            winter_edit / december
+          </h5>
+          <p className="new-classics fw-bolder text-light">New classics</p>
+          <p className="new-description text-light">
+            A modern take on heritage-inspired menswear.
+          </p>
+          <a href="#" className="btn btn-light">
+            Shop now
+          </a>
+        </div>
       </div>
     </div>
   );
