@@ -60,7 +60,7 @@ const Navbar = () => {
             className="d-md-block d-lg-none nav-sm-md-logo"
           />
           <button
-            className="navbar-toggler btn-outline-light"
+            className="navbar-toggler btn-outline-light d-md-none d-lg-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#main_nav"
