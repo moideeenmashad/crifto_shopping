@@ -1,9 +1,4 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import "bootstrap-icons/font/bootstrap-icons.css";
-import "aos/dist/aos.css";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
