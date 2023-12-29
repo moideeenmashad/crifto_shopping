@@ -74,7 +74,7 @@ const Navbar = () => {
               {navbarItemList.map((value, index) => {
                 return (
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href={value.linkTo}>
                       {value.navItem}
                     </a>
                   </li>
