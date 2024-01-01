@@ -6,7 +6,7 @@ import Page404 from "./components/404Page/Page404";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/crifto_shopping">
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="*" exact element={<Page404 />} />
