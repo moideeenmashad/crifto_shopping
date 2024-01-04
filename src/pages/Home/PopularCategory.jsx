@@ -47,29 +47,17 @@ const PopularCategory = () => {
         margin={10}
         nav={false}
         items={7}
-        responsive={{
-          0: {
-            items: 4,
-          },
-          600: {
-            items: 5,
-          },
-          900: {
-            items: 7,
-          },
-        }}
+        responsive={{ 0: { items: 5 }, 600: { items: 7 } }}
         autoplay
         autoplayTimeout={3000}
       >
-        {CarouselImg.map((item, index) => {
-          return (
-            <div className="item">
-              <img src={item.img} alt="" className="img-fluid" />
-            </div>
-          );
-        })}
+        {CarouselImg.map((item, index) => (
+          <div className="item" key={index}>
+            <img src={item.img} alt="" className="img-fluid" />
+          </div>
+        ))}
       </OwlCarousel>
-      ;
+      ; ;
     </div>
   );
 };
