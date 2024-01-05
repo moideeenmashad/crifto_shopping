@@ -8,7 +8,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/crifto_shopping" element={<Home />} />
           <Route path="*" exact element={<Page404 />} />
         </Routes>
       </BrowserRouter>

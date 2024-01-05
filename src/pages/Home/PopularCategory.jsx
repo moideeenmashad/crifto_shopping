@@ -18,22 +18,22 @@ import img18 from "./img/PopulorCatogoriesImg/img18.jpeg";
 import img19 from "./img/PopulorCatogoriesImg/img19.png";
 
 const CarouselImg = [
-  { img: img3 },
-  { img: img4 },
-  { img: img5 },
-  { img: img6 },
-  { img: img7 },
-  { img: img8 },
-  { img: img9 },
-  { img: img10 },
-  { img: img11 },
-  { img: img12 },
-  { img: img13 },
-  { img: img14 },
-  { img: img15 },
-  { img: img17 },
-  { img: img18 },
-  { img: img19 },
+  { img: img3, caption: "Lorem ipsum" },
+  { img: img4, caption: "Lorem ipsum" },
+  { img: img5, caption: "Lorem ipsum" },
+  { img: img6, caption: "Lorem ipsum" },
+  { img: img7, caption: "Lorem ipsum" },
+  { img: img8, caption: "Lorem ipsum" },
+  { img: img9, caption: "Lorem ipsum" },
+  { img: img10, caption: "Lorem ipsum" },
+  { img: img11, caption: "Lorem ipsum" },
+  { img: img12, caption: "Lorem ipsum" },
+  { img: img13, caption: "Lorem ipsum" },
+  { img: img14, caption: "Lorem ipsum" },
+  { img: img15, caption: "Lorem ipsum" },
+  { img: img17, caption: "Lorem ipsum" },
+  { img: img18, caption: "Lorem ipsum" },
+  { img: img19, caption: "Lorem ipsum" },
 ];
 
 const PopularCategory = () => {
@@ -54,10 +54,10 @@ const PopularCategory = () => {
         {CarouselImg.map((item, index) => (
           <div className="item" key={index}>
             <img src={item.img} alt="" className="img-fluid" />
+            <p className="text-center mt-2">{item.caption}</p>
           </div>
         ))}
       </OwlCarousel>
-      ; ;
     </div>
   );
 };
