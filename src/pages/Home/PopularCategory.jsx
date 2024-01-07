@@ -46,7 +46,6 @@ const PopularCategory = () => {
         loop
         margin={10}
         nav={false}
-        items={7}
         responsive={{ 0: { items: 4 }, 600: { items: 5 }, 1000: { items: 7 } }}
         autoplay
         autoplayTimeout={3000}
