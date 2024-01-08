@@ -26,3 +26,14 @@
 .new-description {
   color: #ffffff;
 }
+/* Popular Category */
+.product-category {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgb(164, 164, 164) !important;
+}
+.product-caption {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}

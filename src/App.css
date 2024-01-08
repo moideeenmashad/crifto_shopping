@@ -3,3 +3,6 @@
 @import "~owl.carousel/dist/assets/owl.theme.default.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 @import "~aos/dist/aos.css";
+body {
+  font-family: "Roboto", sans-serif !important;
+}
