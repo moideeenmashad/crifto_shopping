@@ -31,24 +31,20 @@ const Footer = () => {
             <p className="company-address">{aboutCompany}</p>
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
-            <ul>
-              <p className="ft-item shop-list">Categories</p>
-              {categoriesList.map((item, index) => (
-                <a key={index} className="ft-item-list" href={item.ft_item}>
-                  {item.ft_item}
-                </a>
-              ))}
-            </ul>
+            <p className="ft-item shop-list">Categories</p>
+            {categoriesList.map((item, index) => (
+              <a key={index} className="ft-item-list" href={item.ft_item}>
+                {item.ft_item}
+              </a>
+            ))}
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
-            <ul>
-              <p className="ft-item information-list">Informations</p>
-              {informationsList.map((item, index) => (
-                <a key={index} className="ft-item-list" href={item.ft_item}>
-                  {item.ft_item}
-                </a>
-              ))}
-            </ul>
+            <p className="ft-item information-list">Informations</p>
+            {informationsList.map((item, index) => (
+              <a key={index} className="ft-item-list" href={item.ft_item}>
+                {item.ft_item}
+              </a>
+            ))}
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <p className="ft-item contact-list">Contact us</p>
