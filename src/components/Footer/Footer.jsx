@@ -21,6 +21,7 @@ const Footer = () => {
   let [aboutCompany, setaboutCompany] = useState(
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess"
   );
+  let [companyAddress,setCompanyAddress] = useState("385 Lisette Ways, East Iluminada, MA 56787")
 
   return (
     <footer className="container-fluid">
@@ -48,6 +49,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <p className="ft-item contact-list">Contact us</p>
+            <p className="company-address">{companyAddress}</p>
           </div>
         </div>
       </div>
