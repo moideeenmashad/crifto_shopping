@@ -8,10 +8,10 @@ import Loading from "./components/Loading/Loading";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/crifto_shopping" element={<Home />} />
-          <Route path="*" exact element={<Page404 />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -18,10 +18,35 @@ const Footer = () => {
     { ft_item: "Shipping & Delivery", linkTo: "#" },
   ];
 
-  let [aboutCompany, setaboutCompany] = useState(
+  let [aboutCompany, setaAboutCompany] = useState(
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess"
   );
-  let [companyAddress,setCompanyAddress] = useState("385 Lisette Ways, East Iluminada, MA 56787")
+  let [companyAddress, setCompanyAddress] = useState(
+    "385 Lisette Ways, East Iluminada, MA 56787"
+  );
+  // Social Link
+  let youtube = "bi bi-linkedin";
+  let facebook = "bi bi-facebook";
+  let twitter = "bi bi-twitter-x";
+  let instagram = "bi bi-instagram";
+  const socialMedia = [
+    {
+      media: facebook,
+      linkTo: "https://www.facebook.com/",
+    },
+    {
+      media: twitter,
+      linkTo: "https://twitter.com/",
+    },
+    {
+      media: youtube,
+      linkTo: "https://www.youtube.com/",
+    },
+    {
+      media: instagram,
+      linkTo: "https://www.instagram.com/",
+    },
+  ];
 
   return (
     <footer className="container-fluid">
@@ -50,6 +75,19 @@ const Footer = () => {
           <div className="col-12 col-sm-12 col-md-6 col-lg-3">
             <p className="ft-item contact-list">Contact us</p>
             <p className="company-address">{companyAddress}</p>
+            <div className="flex mt-3">
+              {socialMedia.map((item, index) => (
+                <a
+                  href={item.linkTo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-dark px-2"
+                  key={index}
+                >
+                  <i className={item.media}></i>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
