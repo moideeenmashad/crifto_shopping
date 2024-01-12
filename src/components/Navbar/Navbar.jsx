@@ -8,7 +8,7 @@ const Navbar = () => {
     { navItem: "Find Store", linkTo: "#" },
   ];
   let headItemsNav2 = [
-    { navItem: "Sign in", linkTo: "#", iconName: "bi bi-person me-1" },
+    { navItem: "Sign in", linkTo: "/crifto_shopping/login", iconName: "bi bi-person me-1" },
     { navItem: "Favourites", linkTo: "#", iconName: "bi bi-heart me-1" },
     { navItem: "Shopping Cart", linkTo: "#", iconName: "bi bi-cart me-1" },
   ];

@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Login = () => {
+const UserLogin = () => {
+    const [inputData, setInputData] = useState({
+        username: "",
+        password: "",
+    })
+    const hello = () => {
+        console.log(typeof inputData.name)
+    }
+    const inputHandler = (event) => {
+        const { name, value } = event.target
+        setInputData(
+            (previousState) => ({
+                ...previousState,
+                [name]: value
+            })
+        )
+    }
+    const readValues = () => {
+        console.log(inputData)
+    }
     return (
         <div className="container-fluid">
             <div className="container">
@@ -13,8 +32,8 @@ const Login = () => {
                                     <input type="text"
                                         className="form-control"
                                         name="username"
-                                        onChange=""
-                                        value=""
+                                        onChange={inputHandler}
+                                        value={inputData.username}
                                     />
                                 </div>
                                 <div className="col-12">
@@ -22,9 +41,12 @@ const Login = () => {
                                     <input type="text"
                                         className="form-control"
                                         name="password"
-                                        onChange=""
-                                        value=""
+                                        onChange={inputHandler}
+                                        value={inputData.password}
                                     />
+                                </div>
+                                <div className="col-12">
+                                    <button className="btn btn-block btn-primary" onClick={readValues}>login</button>
                                 </div>
                             </div>
                         </div>
@@ -35,4 +57,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default UserLogin

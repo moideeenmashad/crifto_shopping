@@ -15,6 +15,7 @@ import img15 from "./img/PopulorCatogoriesImg/img15.jpeg";
 import img17 from "./img/PopulorCatogoriesImg/img17.jpeg";
 import img18 from "./img/PopulorCatogoriesImg/img18.jpeg";
 import img19 from "./img/PopulorCatogoriesImg/img19.png";
+import NewWomenOutfit from './img/1509Q-3x2-1.jpg';
 import "./Home.css";
 
 const CarouselImg = [
@@ -63,6 +64,7 @@ const PopularCategory = () => {
           </div>
         ))}
       </OwlCarousel>
+      <img src={NewWomenOutfit} alt="" className="img-fluid" />
     </div>
   );
 };
