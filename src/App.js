@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import Page404 from "./components/404Page/Page404";
 // import Loading from "./components/Loading/Loading";
 import UserLogin from "./pages/Login/UserLogin";
+import UserSignup from "./pages/Login/UserSignup";
 function App() {
   return (
     <div>
@@ -13,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Page404 />} />
-          <Route path="/login" element={<UserLogin />} />
+          <Route path="/signin" element={<UserLogin />} />
+          <Route path="/signup" element={<UserSignup />} />
         </Routes>
       </BrowserRouter>
     </div>
