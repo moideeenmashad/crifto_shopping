@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/crifto_shopping/static/css/main.b89e3b64.css",
-    "main.js": "/crifto_shopping/static/js/main.2d019d88.js",
+    "main.js": "/crifto_shopping/static/js/main.e2be65eb.js",
     "static/js/787.8ec3f0d2.chunk.js": "/crifto_shopping/static/js/787.8ec3f0d2.chunk.js",
     "static/media/1509Q-3x2-1.jpg": "/crifto_shopping/static/media/1509Q-3x2-1.9af2b72bc257bbbd3878.jpg",
     "static/media/6038-Holiday-3x2-8-SLUSSEN-GEN.jpg": "/crifto_shopping/static/media/6038-Holiday-3x2-8-SLUSSEN-GEN.295fbd9f02a7337e1101.jpg",
@@ -37,11 +37,11 @@
     "static/media/roboto-latin-900.woff2": "/crifto_shopping/static/media/roboto-latin-900.870c8c1486f76054301a.woff2",
     "index.html": "/crifto_shopping/index.html",
     "main.b89e3b64.css.map": "/crifto_shopping/static/css/main.b89e3b64.css.map",
-    "main.2d019d88.js.map": "/crifto_shopping/static/js/main.2d019d88.js.map",
+    "main.e2be65eb.js.map": "/crifto_shopping/static/js/main.e2be65eb.js.map",
     "787.8ec3f0d2.chunk.js.map": "/crifto_shopping/static/js/787.8ec3f0d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b89e3b64.css",
-    "static/js/main.2d019d88.js"
+    "static/js/main.e2be65eb.js"
   ]
 }

@@ -1,26 +1,7 @@
-import React, { useState } from 'react'
-import './Login&Signup.css';
+import React from 'react'
+import './Login&Signup.css'
 
-const UserLogin = () => {
-    const [inputData, setInputData] = useState({
-        username: "",
-        password: "",
-    })
-    const hello = () => {
-        console.log(typeof inputData.name)
-    }
-    const inputHandler = (event) => {
-        const { name, value } = event.target
-        setInputData(
-            (previousState) => ({
-                ...previousState,
-                [name]: value
-            })
-        )
-    }
-    const readValues = () => {
-        console.log(inputData)
-    }
+const UserSignup = () => {
     return (
         <div className="container-fluid" id="login-body">
             <div className="container">
@@ -60,4 +41,4 @@ const UserLogin = () => {
     )
 }
 
-export default UserLogin
+export default UserSignup

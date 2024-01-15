@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import EventSection from "./Event";
 import PopularCategory from "./PopularCategory";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
       </div>
       <div className="mb-3">
         <PopularCategory />
+      </div>
+      <div className="">
+        <Footer />
       </div>
     </div>
   );
