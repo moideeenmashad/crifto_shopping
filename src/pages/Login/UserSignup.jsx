@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import './Login&Signup.css'
 
 const UserSignup = () => {
@@ -20,51 +21,53 @@ const UserSignup = () => {
         console.log(inputData)
     }
     return (
-        <div className="container-fluid" id="login-body">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-sm-12 col-md-9 col-lg-4">
-                        <div className="card ">
-                            <div className="row g-3 p-3">
-                                <div className="col-12">
-                                    <label htmlFor="" className="form-label">Email</label>
-                                    <input type="text"
-                                        className="form-control"
-                                        name="userEmail"
-                                        onChange={inputHandler}
-                                        value={inputData.userEmail}
-                                    />
-                                </div>
-                                <div className="col-12">
-                                    <label htmlFor="" className="form-label">Create Password</label>
-                                    <input type="password"
-                                        className="form-control"
-                                        name="createPassword"
-                                        onChange={inputHandler}
-                                        value={inputData.createPassword}
-                                    />
-                                </div>
-                                <div className="col-12">
-                                    <label htmlFor="" className="form-label">Date</label>
-                                    <input type="date"
-                                        className="form-control"
-                                        name="regDate"
-                                        onChange={inputHandler}
-                                        value={inputData.regDate}
-                                    />
-                                </div>
-                                <a href="/crifto_shopping/signin" className="text-dark text-end">already a member?</a>
-                                <div className="col-12">
-                                    <button
-                                        className="btn btn-block btn-outline-dark"
-                                        onClick={readValues}>Became a member</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container fluid id="login-body">
+            <Container>
+                <Row className="justify-content-center">
+                    <Col xs={12} sm={12} md={9} lg={4}>
+                        <Card className='p-3'>
+                            <Row className="g-3">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Enter email"
+                                    name="userEmail"
+                                    onChange={inputHandler}
+                                    value={inputData.userEmail}
+                                />
+                                <Form.Label>Create Password</Form.Label>
+                                <Form.Control
+                                    type="password"
+                                    placeholder="Enter password"
+                                    name="createPassword"
+                                    onChange={inputHandler}
+                                    value={inputData.createPassword}
+                                />
+                                <Form.Label>Date</Form.Label>
+                                <Form.Control
+                                    type="date"
+                                    name="regDate"
+                                    onChange={inputHandler}
+                                    value={inputData.regDate}
+                                />
+
+                                <a href="/signin" className="text-dark text-end">
+                                    already a member?
+                                </a>
+
+                                <Button
+                                    variant="outline-dark"
+                                    className="btn-block"
+                                    onClick={readValues}
+                                >
+                                    Become a member
+                                </Button>
+                            </Row>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </Container>
     )
 }
 

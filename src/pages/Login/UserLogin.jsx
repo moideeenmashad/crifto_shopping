@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import './Login&Signup.css';
 
 const UserLogin = () => {
@@ -19,63 +20,66 @@ const UserLogin = () => {
         console.log(inputData)
     }
     let goToSignup = () => {
-        window.location.href = "/crifto_shopping/signup";
+        window.location.href = "/signup";
     }
     return (
-        <div className="container-fluid"
-            id="login-body">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-12 col-sm-12 col-md-9 col-lg-4">
-                        <div className="card ">
-                            <div className="row g-3 p-3">
-                                <div
-                                    className="col-12">
-                                    <label
-                                        htmlFor=""
-                                        className="form-label">User Name</label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        name="username"
-                                        onChange={inputHandler}
-                                        value={inputData.username}
-                                    />
-                                </div>
-                                <div
-                                    className="col-12">
-                                    <label htmlFor=""
-                                        className="form-label">Password</label>
-                                    <input
-                                        type="password"
-                                        className="form-control"
-                                        name="password"
-                                        onChange={inputHandler}
-                                        value={inputData.password}
-                                    />
-                                </div>
-                                <a
-                                    href="#"
-                                    className='text-dark text-end'>Forgot password?</a>
-                                <div className="col-12">
-                                    <button
-                                        className="btn btn-block btn-primary"
-                                        onClick={readValues}
-                                    >login</button>
-                                </div>
-                                <div
-                                    className="col-12">
-                                    <button
-                                        className="btn btn-block btn-dark"
-                                        onClick={goToSignup}
-                                    >Become a member</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container fluid id="login-body">
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs={12} sm={12} md={9} lg={4}>
+              <Card className="p-3">
+                    <Row className="g-3">
+                      <Col xs={12}>
+                        <Form.Label htmlFor="username" className="form-label">
+                          User Name
+                        </Form.Label>
+                        <Form.Control
+                          type="text"
+                          name="username"
+                          onChange={inputHandler}
+                          value={inputData.username}
+                        />
+                      </Col>
+                      <Col xs={12}>
+                        <Form.Label htmlFor="password" className="form-label">
+                          Password
+                        </Form.Label>
+                        <Form.Control
+                          type="password"
+                          name="password"
+                          onChange={inputHandler}
+                          value={inputData.password}
+                        />
+                      </Col>
+                      <Col xs={12} className="text-end">
+                        <a href="#" className="text-dark">
+                          Forgot password?
+                        </a>
+                      </Col>
+                      <Col xs={12}>
+                        <Button
+                          variant="primary"
+                          className="btn-block"
+                          onClick={readValues}
+                        >
+                          Login
+                        </Button>
+                      </Col>
+                      <Col xs={12}>
+                        <Button
+                          variant="dark"
+                          className="btn-block"
+                          onClick={goToSignup}
+                        >
+                          Become a member
+                        </Button>
+                      </Col>
+                    </Row>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
     )
 }
 
