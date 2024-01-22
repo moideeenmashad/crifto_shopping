@@ -9,7 +9,7 @@ import UserLogin from "./pages/Login/UserLogin";
 function App() {
   return (
     <div>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Page404 />} />
