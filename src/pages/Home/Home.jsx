@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../layouts/Navbar/Navbar";
 import EventSection from "./Event";
 import PopularCategory from "./PopularCategory";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../layouts/Footer/Footer";
 
 const Home = () => {
   return (
