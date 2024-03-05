@@ -3,6 +3,8 @@ import Navbar from "../../layouts/Navbar/Navbar";
 import EventSection from "./Event";
 import PopularCategory from "./PopularCategory";
 import Footer from "../../layouts/Footer/Footer";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop";
+// import Loading from "../../components/Loading/Loading";
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <div className="">
         <Footer />
       </div>
+      <ScrollToTop />
+      {/* <Loading /> */}
     </div>
   );
 };

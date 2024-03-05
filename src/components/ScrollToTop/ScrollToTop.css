@@ -1,0 +1,6 @@
+#back-to-top {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    border-radius: 100%;
+}
