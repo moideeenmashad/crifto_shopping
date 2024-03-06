@@ -32,7 +32,7 @@ const ScrollToTop = () => {
         <div>
             {isVisible && (
                 <button id="back-to-top" className='btn btn-dark' onClick={handleBackToTop}>
-                  <i className="bi bi-arrow-up"></i>
+                    <i className="bi bi-arrow-up"></i>
                 </button>
             )}
         </div>
